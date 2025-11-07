@@ -1,0 +1,624 @@
+*{
+    font-family:'Poppins', serif;
+    box-sizing: border-box;
+}
+
+html, body{
+margin:0px;
+padding:0px;
+width:100%;
+background: linear-gradient(90deg,rgb(7, 55, 103),rgb(26, 54, 116),rgb(16, 121, 142));
+background-size: cover;
+color:white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding:0px;
+    margin:0px;
+    /* height:10000px */
+    
+}
+ 
+/* Header Start */
+header{
+    padding:0px;
+    margin:0px;
+    width:100%;
+    background: rgb(14, 42, 74);
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+
+.container{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+flex-direction: row;
+height:90px;
+}
+
+.container label, input{
+    display: none;
+}
+
+.container nav ul{
+    display: flex;
+    width:100%;
+    list-style: none;
+    padding:0px;
+    margin:0px;
+    
+}
+
+.container nav ul li a{
+    line-height: 90px;
+   padding:16px 16px 16px 16px;
+   text-decoration: none;
+   font-size: 1.4em;
+   /* background-color: brown; */
+   margin:5px;
+   border-radius: 4px;
+   color:white;
+   transition: all 0.4s ease;
+   position: relative;
+}
+.container nav ul li a:hover{
+background-color: rgba(255,255,255,0.18);
+
+-webkit-backdrop-filter: blur(12px);
+
+
+}
+
+.container nav ul li a::after, .container nav ul li a::before{
+content:"";
+position: absolute;
+bottom:0px;
+width:0px;
+height:2px;
+box-shadow: 0 0 8px #00bfff;
+transition: width 0.3s ease;
+background:  #00bfff
+
+
+}
+.container nav ul li a::before{
+    left:0%;
+}
+.container nav ul li a::after{
+    right:0%;
+}
+.container nav ul li a:hover::before, .container nav ul li a:hover::after{
+    width:50%;
+}
+
+body .brand h1{
+    position: absolute;
+    margin:18px 16px 16px 16px; 
+    /* position: relative; */
+    padding-bottom: 2px;
+}
+
+body .brand h1::before, body .brand h1::after{
+    content: "";
+    position: absolute;
+    width:0px;
+    height:2px;
+    bottom:0px;
+    background-color: #00bfff;
+    box-shadow:0 0 8px #00bfff;
+    transition: width 0.4s ease;
+}
+
+body .brand h1::before{
+    left:50%;
+}
+body .brand h1::after{
+    right:50%;
+}
+
+body .brand h1:hover::before, body .brand h1:hover::after{
+    width:50%;
+}
+body .brand h1 a{
+    text-decoration: none;
+    color:white;
+}
+
+body .brand h1 span{
+    color:rgb(141, 194, 224);
+}
+/* Header End */
+
+/* Home Start */
+body #container{
+    width:100%;
+    margin:auto;
+    padding:20px;
+    margin:0px;
+}
+
+body #container #home{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-top:50px; */
+    padding-top:40px;
+}
+
+
+body #container #home .display{
+    width:35%;
+}
+
+body #container #home  .display img{
+    width:100%;
+    object-fit: cover;
+    border-radius:60% ;
+    transition: all 0.4s ease;
+}
+
+body #container #home  .display img:hover{
+    transform: scale(1.05);
+    box-shadow:4px 4px 40px -5px #00bfff;
+}
+
+body #container #home .gambars{
+    margin-top:140px;
+    padding:20px;
+    background-color: rgba(255,255,255,0.10);
+    width:20%;
+    border-radius: 60%;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    animation:edit 2s forwards ease infinite;
+
+
+}
+@keyframes edit{
+    0%{
+       border-radius:40% 20% 50% 65%;
+       box-shadow:0px 0px 50px -10px #00bfff;
+    }
+    40%{
+        border-radius:20% 40% 60% 55%;
+        box-shadow:4px 4px 50px -10px #00bfff;
+    }
+    60%{
+        border-radius:60% 50% 45% 60%;
+        box-shadow:0px 0px 50px -10px #00bfff;
+    }
+    100%{
+        border-radius:40% 20% 50% 55%;
+        box-shadow:4px 4px 50px -10px #00bfff;
+    }
+}
+
+body #container #home #display span{
+    margin-left:10px;
+}
+
+body #container #home .teks{
+    padding:8px;
+    border:1px solid rgba(255,255,255,0.2);
+    width:49%;
+    border-radius:10px;
+    padding:20px;
+    background-color: rgba(255,255,255,0.10);
+    margin-top: 170px;
+    transition: all 0.3s ease;
+    height:450px;
+}
+
+
+body #container #home .teks:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 20px -5px #00bfff,
+    4px 4px 20px -5px #00bfff;
+    
+}
+body #container #home .teks ul{
+    padding:0px;
+    margin:0px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    margin-top:80px;
+    margin-bottom: 0px;;
+    padding:16px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+}
+body #container #home .teks ul li .fab{
+    font-size: 1.8em;
+    color:white;
+}
+
+
+/* Home End */
+
+/* About Start */
+
+#container #about-me {
+    padding-top:0px;
+    margin-top:0px;
+    width:100%;
+    
+}
+ #container #about-me #title-about{
+    text-align: center;
+    font-family: 'Poppins', serif;
+    padding-top:100px;
+    width:50%;
+    border-bottom:1px solid rgba(255,255,255,0.10);
+    margin:40px auto;
+ }
+
+ #container #about-me .about-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    margin:150px auto;
+    padding:0px;
+    margin-bottom:50px;
+
+
+ }
+#container #about-me .about-container .about{
+    width:49%;
+}
+
+#container #about-me .about-container .images{
+    padding:10px;
+}
+
+
+
+#container #about-me .about-container .images .imaage{
+    background-color: rgba(255,255,255,0.10);
+    width:60%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left:60px;
+    border: 1px solid rgba(255,255,255,0.18);
+    animation: efek 2s forwards ease infinite;
+    margin:auto;
+}
+#container #about-me .about-container .images .imaage img{
+    width:100%;
+}
+
+@keyframes efek{
+    0%{
+        border-radius: 500px 400px 200px 70px;
+        box-shadow: 4px 6px 20px -5px #00bfff;
+        
+        
+    }
+    40%{
+        border-radius: 80% 70% 70px 60%;
+        box-shadow: 6px 4px 15px -10px #00bfff;
+        
+    }
+
+    60%{
+        border-radius: 90% 80% 70% 65%;
+        box-shadow: 4px 6px 20px -5px #00bfff;
+    }
+    80%{
+         border-radius: 65% 55% 65px 55%;
+        box-shadow: 6px 4px 15px -10px #00bfff;
+        
+
+    }
+    100%{
+        border-radius: 60% 60% 68px 75%;
+        box-shadow: 4px 6px 20px -5px #00bfff;
+        
+    }
+}
+
+#container #about-me .about-container .text{
+    padding:10px;
+    background-color: rgba(255,255,255,0.10);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:10px;
+    text-align: justify;
+    padding:20px;
+    box-shadow:5px 10px 40px -10px #00bfff;
+    
+}
+
+#container #about-me .about-container .text p{
+    font-size: 1.2em;
+}
+ /* About End */
+
+ /* Project Start */
+ #container #container-project{
+    width:100%;
+    padding-top:80px;
+    margin:0px;
+ }
+
+ #container #container-project #projects{
+    text-align: center;
+    padding:10px;
+    /* border:1px solid#00bfff; */
+    width:fit-content;
+    /* border-radius: 20px 20px 0px 0px; */
+    /* background-color: rgba(255,255,255,0.10); */
+    margin:auto;
+    margin-bottom:80px;
+    position: relative;
+    transition: all 0.4s ease;
+    padding-top:100px;
+ }
+
+ #container #container-project #projects::before, #container #container-project #projects::after{
+    content:"";
+    width:0px;
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    background-color: #00bfff;
+    transition: all 0.4s ease;
+    box-shadow: 0px 0px 20px -10px #00bfff ;
+
+ }
+
+ #container #container-project #projects::before{
+    right:50%;
+
+ }
+ #container #container-project #projects::after{
+    left:50%;
+ }
+ #container #container-project #projects:hover::before, #container #container-project #projects:hover::after{
+width: 50%;
+
+ }
+ #container #container-project #project-container{
+    width:100%;
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ }
+ #container #container-project #project-container .display-project{
+    padding:10px;
+    background-color: rgba(255,255,255,0.10);
+    border:1px solid #00bfff;
+    border-radius: 18px;
+    animation: borders 4s forwards ease infinite;
+    width:25%;
+    text-align: center;
+    margin-bottom: 80px;
+ }
+
+ @keyframes borders{
+    0%{
+        border-color: #00bfff;
+    }
+    40%{
+        border-color: yellow;
+    }
+    60%{
+        border-color:gold;
+    }
+    80%{
+        border-color:rgb(156, 255, 90);
+    }
+    100%{
+        border-color: #00bfff;
+    }
+    }
+ 
+#container #container-project #project-container .display-project img{
+    width:100%;
+    object-fit: cover;
+}
+
+ /* Project End */
+
+ /* Sertificat Start */
+ #container #serticat-container{
+    width:100%;
+    padding:0px;
+    margin:0px;
+    background-color: rgba(255,255,255,0.10);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;;
+    
+ }
+#container #serticat-container h1{
+    width:fit-content;
+    text-align: center;
+    margin:auto;
+    padding-top:100px;
+    margin-bottom:80px;
+    position: relative;
+    transition: all 0.4s ease;
+    
+    
+    
+    
+}
+#container #serticat-container h1::before, #container #serticat-container h1::after{
+    content:"";
+    position: absolute;
+    width: 0px;
+    bottom:0px;
+    height:2px;
+    background-color: #00bfff;
+    transition: all 0.4s ease;
+}
+
+#container #serticat-container h1::before{
+    right:50%;
+}
+#container #serticat-container h1::after{
+    left:50%;
+}
+
+#container #serticat-container h1:hover::before, #container #serticat-container h1:hover::after{
+    width:50%;
+}
+
+
+#container #serticat-container #container-sertificat{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#container #serticat-container #container-sertificat .display-serticat{
+    width:40%;
+    margin-bottom:40px;
+    padding:8px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius:10px;
+    background-color: rgba(255,255,255,0.10);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 4px 4px 20px -5px #00bfff;
+    transition: all 0.6s ease;
+}
+
+#container #serticat-container #container-sertificat .kiri:hover{
+    transform:rotate(-5deg) ;
+}
+#container #serticat-container #container-sertificat .kanan:hover{
+    transform:rotate(5deg) ;
+}
+#container #serticat-container #container-sertificat .bawah{
+    overflow: hidden;
+}
+#container #serticat-container #container-sertificat .bawah img{
+    transition: all 0.4s ease;
+}
+#container #serticat-container #container-sertificat .bawah img:hover{
+   transform: scale(1.05);
+   opacity: 1;
+   filter: brightness(1.05);
+}
+#container #serticat-container #container-sertificat .display-serticat img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;;
+}
+
+
+
+ /* Sertificat End */
+
+
+@media (max-width:920px){
+    .container label{
+        font-size: 1.8em;
+    display: block;
+    position: absolute;
+    top:20px;
+    right:20px;
+    
+    }
+
+    .container nav ul{
+        flex-direction: column;
+        background-color: rgba(255,255,255,0.18);
+        border-radius: 0px 0px 0px 10px;
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        position: absolute;
+        width:100%;
+        top:90px;
+        left:0px;
+        
+    }
+
+    .container nav ul li a:hover{
+background-color: transparent;
+border:none;
+    }
+
+    .container nav ul li:hover{
+        background-color: rgba(255,255,255,0.15);
+    } 
+
+    .container nav{
+        display: none;
+    }
+
+    .container .activeNavigasi{
+        display:flex;
+     }
+
+     body #container #home .teks{
+        width:80%;
+        margin-top:100px;
+        margin-bottom: 10px;;
+        height:550px;
+        
+     }
+
+     body #container #home .gambars{
+        width:60%;
+        margin-bottom: 50px;
+     }
+    #container #about-me{
+        margin-top:0px;
+        padding-top:0px;
+    }
+     #container #about-me #title-about{
+        
+         padding-top:100px;
+     }
+
+     #container #about-me .about-container{
+        width:100%;
+        
+     }
+
+     #container #about-me .about-container .about{
+        width:90%;
+        margin-bottom:40px;
+     }
+
+     #container #about-me .about-container .images .imaage {
+        width:80%;
+     }
+
+
+     #container #container-project #project-container .display-project{
+        width:45%;
+     }
+
+    
+}
+
+@media (max-width:700px){
+    #container #container-project #project-container .display-project{
+        width:90%;
+     }
+
+     #container #serticat-container #container-sertificat .display-serticat{
+        width:90%;
+     }
+}
+
+
+
